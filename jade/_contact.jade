@@ -1,0 +1,33 @@
+#contact-form
+	.row
+		.column.small-12.small-centered.medium-8.medium-centered.text-center
+			h1.text-center Contact
+			h3.text-center We're always willing to listen. What's on your mind?
+
+	.row
+		.column.small-12.small-centered.medium-8.medium-centered
+			
+			form#contact(data-abide)
+				.row
+					.column.small-12
+						label Name
+							input#name(type='text', placeholder='Name', name='name', required, pattern="[a-zA-Z]")
+						small.error What's your real name?
+					.column.small-12
+						label Email
+							input#email(type='text', placeholder='name@example.com', name='email', required)
+						small.error We need your email
+				.row
+					.column.small-12
+						label Subject
+							input#subject(type='text', placeholder='subject', name='subject', required)
+							small.error What's this all about?
+				.row
+					.column.small-12
+						label Messase
+							textarea#message(type='text', placeholder='Hi there!', rows='10', name='message', required)
+							small.error Tell us something.
+				input(type='hidden', name='hidden',value='contact')
+				.row
+					.column.small-12
+						button.button.success.right#submit(type='submit', value='submit') SEND

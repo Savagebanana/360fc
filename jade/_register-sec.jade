@@ -1,0 +1,56 @@
+#register
+	//- headings
+	.row.small-centered.medium-centered
+		.column.small-11.medium-8.small-centered.medium-centered
+			.headings.text-center
+				h1 registration
+				p.text-justify Registering for 360 Futbol Camp guarantees each camper 5 fun filled days. In addition to having fun, campers will develop skills they can use on and off the pitch. 360 Futbol Camp provides all campers with two customized athletic training shirts that are to be worn daily to camp. Each camper is asked to bring water, snacks and a lunch.
+	.row
+		.column.small-12.medium-6
+				ul.pricing-table
+					li.title 1 WEEK @ 360 FC
+					li.price$300
+					li.description 5 days of Training, Development and Fun
+					li.bullet-item Guaranteed Improvment
+					li.bullet-item 2 Customized Practice Shirts
+					li.cta-button: a.button(href='/register-1.html', target='_blank') Register Now!
+		.column.small-12.medium-6
+				ul.pricing-table
+					li.title 2 WEEKS @ 360 FC
+					li.price$550
+					li.description 10 days of Training, Development and Fun
+					li.bullet-item Guaranteed Improvment
+					li.bullet-item 2 Customized Practice Shirts
+					li.cta-button: a.button(href='/register-1.html', target='_blank') Register Now!
+	
+	//- button group, soccer for change
+	.row.clearfix(data-equalizer)
+		//- soccer for change
+		.column.small-12.medium-8.left(data-equalizer-watch)
+			.row
+				.column.small-12.small-center.text-center
+					a(href='http://www.soccerforchange.ca/index.html'): img.logo(src='images/soccer-for-change.svg')
+					p.text-justify This summer we are teaming up with the non-profit organization Soccer for Change, and $5 of every registration will be donated to this great cause, and hopefully we can help to use sport and play to educate, empower, and develop leadership and communication skills in children. 
+			.row
+				.column.small-12.text-center
+					a(href='http://www.soccerforchange.ca/index.html'): h4 Visit The Site
+					div.video
+						a(href='#', data-reveal-id='scfVideo') 
+							i.fa.fa-youtube-play.fa-5x.sfc
+					include _soccer-for-change
+		//- button groups
+		.column.small-12.small-centered.medium-4.left(data-equalizer-watch)
+			.row
+				.column.small-12.text-center
+					h4 Sessions
+			.row
+				.column.small-12		
+					ul.stack.radius.button-group
+						li.reg-btn: a.button.secondary A1   (July 20 - 24)
+						li.reg-btn: a.button.secondary A2   (July 27 - 31)
+						li.reg-btn: a.button.secondary B1   (August 3 - 7)
+						li.reg-btn: a.button.secondary B2   (August 10 - 14)
+						li.reg-btn: a.button.secondary C1   (August 17 - 21)
+						li.reg-btn: a.button.secondary C2   (August 24 - 28)
+		//- daily format 
+		.column.small-12.medium-4.left(data-equalizer-watch)

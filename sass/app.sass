@@ -1,0 +1,341 @@
+@import "settings"
+// @import "foundation"
+// Or selectively include components
+
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+@import "foundation/components/block-grid"
+//   "foundation/components/breadcrumbs",
+@import "foundation/components/button-groups"
+@import "foundation/components/buttons"
+@import "foundation/components/clearing"
+@import "foundation/components/dropdown"
+@import "foundation/components/dropdown-buttons"
+@import "foundation/components/flex-video"
+@import "foundation/components/forms"
+@import "foundation/components/grid"
+@import "foundation/components/inline-lists"
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+@import "foundation/components/orbit"
+//   "foundation/components/pagination",
+@import "foundation/components/panels"
+@import "foundation/components/pricing-tables"
+//   "foundation/components/progress-bars",
+@import "foundation/components/reveal"
+//   "foundation/components/side-nav",
+@import "foundation/components/split-buttons"
+//   "foundation/components/sub-nav",
+//   "foundation/components/switches",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/thumbs",
+@import "foundation/components/tooltips"
+@import "foundation/components/top-bar"
+@import "foundation/components/type"
+//   "foundation/components/offcanvas",
+//   "foundation/components/visibility";
+
+
+
+// ***************CUSTOM SASS SELECTORS HERE********************
+// NAVIGATION SECTION STYLING*********************************************************
+
+.headroom--pinned
+	display: block
+	z-index: 10
+	position: fixed
+	left: 0
+	right: 0
+	top: 0
+	box-shadow: 1px 0 5px rgba(0,0,0,.3)
+.headroom--unpinned
+	display: none
+// HEADER SECTION STYLING*********************************************************
+
+#header-content
+	padding-bottom: rem-calc(50)
+	background: $primary-color
+
+	h4.nav
+		color: $info-color
+		text-align: center
+		font-weight: 400
+
+
+@media #{$topbar-media-query}
+	nav.top-bar
+		text-align: center
+
+	section.top-bar-section
+		display: inline-block
+		
+	section.top-bar-section ul li a
+		text-align: center
+		text-transform: uppercase
+
+img.logo
+	display: block
+	margin: 25% auto 0 auto
+
+div.brand h4
+	color: $info-color
+
+.hero-scroll
+	text-align: center
+	padding-top: rem-calc(80)
+	font-weight: 200
+	a
+		color: $info-color
+
+		&:hover
+			color: $secondary-color
+
+// ABOUT SECTION STYLING**********************************************************
+
+#about 
+	padding: rem-calc(30 0)
+	
+	.top
+		margin-bottom: rem-calc(40)
+	.bottom
+		margin-top: rem-calc(40)
+
+	div h1
+		position: relative
+		color: $secondary-color
+		border: 1px solid $secondary-color
+		border-radius: rem-calc(15)
+		text-transform: uppercase
+		display: inline-block
+		padding: rem-calc(0 10)
+		text-align: center
+		font-weight: 300
+	
+	@media #{$medium-up}
+		ul > li
+			width: 20%
+	.week-sched a
+		display: inline-block
+		position: relative
+		font-size: rem-calc(16)
+		
+		&:hover .week-play
+			display: block
+			-webkit-display: block
+	
+		.week-play
+			display: block
+			display: -webkit-block
+			position: absolute
+			top: 105%
+			left: -15%
+			background: $primary-color
+			padding: rem-calc(10)
+			z-index: 3
+			-webkit-z-index: 3
+			width: rem-calc(200)
+			display: none
+			border-radius: rem-calc(2)
+			cursor: pointer
+			@media #{$small-only}
+				top: 105%
+				left: 30%
+		h5
+			margin-top: rem-calc(1)
+			margin-bottom: rem-calc(1.5)
+		p
+			margin-bottom: 0
+			line-height: rem-calc(16)
+
+// OUR TEAM SECTION STYLING**********************************************************
+
+#our-team
+	background: $secondary-color
+	padding: rem-calc(30 0)
+	
+	h1
+		color: $info-color
+		font-weight: 300
+		border: 1px solid $info-color
+		border-radius: rem-calc(15)
+		text-transform: uppercase
+		display: inline-block
+		padding: rem-calc(0 10)
+	
+	h2,h3,h4,h5,h6
+		color: $info-color
+	p
+		color: $info-color
+
+	img
+		border-radius: 1%
+		padding: rem-calc(20) 0
+
+	img.thumb
+		border-radius: 50%
+		// overflow:hidden
+		vertical-align: center
+	
+	div.panel p
+		color: $secondary-color
+
+	div.panel h2
+		color: $secondary-color
+		font-weight: 600
+	div.panel h4
+		color: $primary-color
+		font-weight: 200
+		margin-top: rem-calc(1)
+		margin-bottom: rem-calc(4)
+	div.panel h4.subheader
+		color: $secondary-color
+		font-weight: 200
+		margin-bottom: rem-calc(16)
+		
+
+// TESTIMONIAL SECTION STYLING**********************************************************
+
+#testimonial
+	padding: rem-calc(20 0)
+	background: linear-gradient(rgba(49, 115, 159, 0.8), rgba(52, 144, 206, 0.8)), url("../images/slide-bg.png") no-repeat center center fixed
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	background-size: cover
+
+	div.slider-with-photo
+		background-size: transparent
+	
+		div.box
+			position: relative
+
+			blockquote h1.quote
+				font-size: rem-calc(20)
+				font-weight: 100
+				color: $info-color
+
+			blockquote cite.author
+				position: relative
+				left: 65%
+		h1.quote:before 
+			content: "\201C"
+			font-size: 60px
+			font-weight: 300
+			line-height: 0
+			position: relative
+			top: 12px
+
+		h1.quote:after 
+			content: "\201D"
+			font-size: 60px
+			font-weight: 300
+			line-height: 0
+			position: relative
+			bottom: -24px
+			right: -2px
+
+// GOOGLE MAP STYLE **********************************************************
+#map
+	.container
+		width: 100%
+		overflow: hidden
+		margin: 0 auto
+
+
+// CONTACT SECTION STYLING**********************************************************
+
+#contact-form
+	padding: rem-calc(30 0)
+	h1
+		color: $secondary-color
+		font-weight: 300
+		border: 1px solid $secondary-color
+		border-radius: rem-calc(15)
+		text-transform: uppercase
+		display: inline-block
+		padding: rem-calc(0 10)
+
+// REGISTRATION-SEC STYLING**********************************************************
+
+#register
+	background: $primary-color
+	padding: rem-calc(30 0)
+	
+	h1,h2
+		color: $info-color
+		font-weight: 300
+		border: 1px solid $info-color
+		border-radius: rem-calc(15)
+		text-transform: uppercase
+		display: inline-block
+		padding: rem-calc(0 10)
+	
+	h3,h4
+		color: $info-color
+		font-weight: 400
+		text-transform: uppercase
+	.reg-btn h5
+		color: darken($info-color,5%)
+		font-weight: 700
+		display: inline-block
+		margin-top: rem-calc(1)
+
+	p
+		color: $info-color
+		margin: rem-calc(40 0)
+
+	.vert
+		position: relative
+		vertical-align: middle
+	img.logo
+		padding-top: rem-calc(15)
+	.sfc
+		color: $secondary-color
+
+		&:hover
+			color: lighten($secondary-color,10%)
+
+
+
+// REGISTRATION FORM STYLING**********************************************************			
+#registration-form-one 
+	h5
+		background: lighten($primary-color, 10%)
+		padding: rem-calc(10)
+		border-radius: rem-calc(5)
+	
+	label p 
+		margin-bottom: 0
+		color: $primary-color !important
+
+
+// FOOTER STYLING**********************************************************
+#footer
+	padding-top: rem-calc(80)
+	background: $primary-color
+	ul
+		display: block
+		width: 100%
+		margin: rem-calc(15 0)
+		li
+			display: inline-block
+			width: 33.33%
+			margin: 0
+
+	a
+		color: darken($secondary-color, 3%)
+		&:hover
+			color: lighten($secondary-color, 10%)
+	p
+		color: lighten($primary-color, 10%)
+
+
+
+
+
+
+
+
+

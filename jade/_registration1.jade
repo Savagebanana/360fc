@@ -1,0 +1,298 @@
+#registration-form-one 
+	.row
+		.column.small-12.medium-12.text-center
+			h1 Registration Form
+			h4 You can reach Coach Paul at (416) 707-8850 with questions about the registration process.
+	.row
+		.column.small-6
+			h5.right $300 - 1 week
+		.column.small-6
+			h5.left $550 - 2 weeks
+	form#week(data-abide)
+		.row
+			.column.small-12
+				p Please select a session/s to register for.
+				ul.button-group.radius.stack-for-small
+					li.button.secondary
+						label(for='A1')
+							p July 20 - 24
+							input(type='checkbox',id="A1", name='A1')
+					
+					li.button.secondary
+						label
+							p July 27 - 31
+							input(type='checkbox',id="A2", name='A2')
+					
+					li.button.secondary
+						label
+							p August 3 - 7
+							input(type='checkbox',id='B1', name='B1')
+					
+					li.button.secondary
+						label
+							p August 10 - 14
+							input(type='checkbox',id='B2', name='B2')
+					
+					li.button.secondary
+						label
+							p August 17 - 21
+							input(type='checkbox',id='C1', name='C1')
+					
+					li.button.secondary
+						label
+							p August 24 - 28
+							input(type='checkbox',id='C2', name='C2')
+		.row
+			.column.small-12.medium-12
+				fieldset
+					legend Contact Info
+					.row
+						.column.small-12.medium-6
+							label Parents Name
+								input#parent-name(type='text', placeholder='Parents Full Name', name='parent-name')
+					.row
+						.column.small-12.medium-6
+							label Email Address
+								input#email(type='email', placeholder='email@example.com', name='parent-email')
+					.row
+						.column.small-12.medium-6
+							label Phone Number
+								input#phone(type='text', placeholder='(416)123-4567', name='phone')
+					.row
+						.column.small-12.medium-6
+							label Address
+								input#address(type='text', placeholder='123 City st.', name='address')
+					.row
+						.column.small-12.medium-5
+							label City
+								input#city(type='text', placeholder='Vaughan', name='city')
+					.row
+						.column.small-12.medium-4
+							label Postal Code
+								input#postal-code(type='text', placeholder='A1B 2C3', name='postal-code')
+					hr
+					.row
+						.column.small-12.medium-6
+							label Emergency Contact
+								input#emergency-contact(type='text', placeholder='Name', name='emergency-contact')
+						.column.small-12.medium-6
+							label Emergency Phone Number
+								input#emergency-phone(type='text', placeholder='(416) 123-4567', name='emergency-phone')
+					.row
+						.column.small-12.medium-4
+							label Relation to Camper
+								input#relation(type='text', placeholder='Mother, Father, Grandma, Friend', name='relation')
+		//- End Parnet Info Row
+		.row
+			.column.small-12.medium
+				fieldset
+					legend Participant Info
+					div#participant-container
+						#kid-one
+							.row
+								.column.small-12.medium-6
+									label Name (camper 1)
+										input#camper-one-name(type='text', placeholder='Childs name', name='camper-1-name')
+							.row.clearfix
+								.column.small-6.medium-2.left
+									label  Birthday Month
+										select(name='birth-month')
+											option(Value='January') January
+											option(Value='February') February
+											option(Value='March') March
+											option(Value='April') April
+											option(Value='May') May
+											option(Value='June') June
+											option(Value='July') July
+											option(Value='August') August
+											option(Value='September') September
+											option(Value='October') October
+											option(Value='November') November
+											option(Value='December') December
+								.column.small-3.medium-1.left
+									label Day
+										select(name='birth-day')
+											option(Value='1') 1
+											option(Value='2') 2
+											option(Value='3') 3
+											option(Value='4') 4
+											option(Value='5') 5
+											option(Value='6') 6
+											option(Value='7') 7
+											option(Value='8') 8
+											option(Value='9') 9
+											option(Value='10') 10
+											option(Value='11') 11
+											option(Value='12') 12
+											option(Value='13') 13
+											option(Value='14') 14
+											option(Value='15') 15
+											option(Value='16') 16
+											option(Value='17') 17
+											option(Value='18') 18
+											option(Value='19') 19
+											option(Value='20') 20
+											option(Value='21') 21
+											option(Value='22') 22
+											option(Value='23') 23
+											option(Value='24') 24
+											option(Value='25') 25
+											option(Value='26') 26
+											option(Value='27') 27
+											option(Value='28') 28
+											option(Value='29') 29
+											option(Value='30') 30
+											option(Value='31') 31
+								.column.small-3.medium-2.left
+									label Year
+										select(name='birth-year')
+											option(Value='2000') 2000
+											option(Value='2001') 2001
+											option(Value='2002') 2002
+											option(Value='2003') 2003
+											option(Value='2004') 2004
+											option(Value='2005') 2005
+											option(Value='2006') 2006
+											option(Value='2007') 2007
+											option(Value='2008') 2008
+											option(Value='2009') 2009
+							.row
+								.column.small-6.medium-3.left
+									label Shirt Size
+										select(name='shirt-size')
+											option(Value='Youth S') Youth S
+											option(Value='Youth M') Youth M
+											option(Value='Youth L') Youth L
+											option(Value='Youth XL') Youth XL
+											option(Value='S') Small
+											option(Value='M') Medium
+											option(Value='L') Large
+							.row
+								.column.small-12.medium-12
+									fieldset
+										legend Medical
+										.row
+											.column.small-12.medium-12
+												label Allergies
+													textarea(type='text', placeholder='Please list all allergies here...', name='allergies',rows='6')
+										.row
+											.column.small-12.medium-3
+												label Requires medication
+												input(type='radio', name='meds-req', value='yes')
+												label(for='med-yes') Yes
+												input(type='radio', name='meds-req', value='no')
+												label(for='med-no') No
+										
+										
+							.row#add-camper
+								.column.small-12.medium-12
+									a(onclick='addCamper()').button.tiny.secondary.round.left
+										| + another camper
+
+						#kid-two.hide
+							.row
+								.column.small-12.medium-6
+									label Name (camper 2)
+										input#camper-2-name(type='text', placeholder='Childs name', name='camper-2-name')
+							.row.clearfix
+								.column.small-6.medium-2.left
+									label  Birthday Month
+										select(name='birth-month-2')
+											option(Value='January') January
+											option(Value='February') February
+											option(Value='March') March
+											option(Value='April') April
+											option(Value='May') May
+											option(Value='June') June
+											option(Value='July') July
+											option(Value='August') August
+											option(Value='September') September
+											option(Value='October') October
+											option(Value='November') November
+											option(Value='December') December
+								.column.small-3.medium-1.left
+									label Day
+										select(name='birth-day-2')
+											option(Value='1') 1
+											option(Value='2') 2
+											option(Value='3') 3
+											option(Value='4') 4
+											option(Value='5') 5
+											option(Value='6') 6
+											option(Value='7') 7
+											option(Value='8') 8
+											option(Value='9') 9
+											option(Value='10') 10
+											option(Value='11') 11
+											option(Value='12') 12
+											option(Value='13') 13
+											option(Value='14') 14
+											option(Value='15') 15
+											option(Value='16') 16
+											option(Value='17') 17
+											option(Value='18') 18
+											option(Value='19') 19
+											option(Value='20') 20
+											option(Value='21') 21
+											option(Value='22') 22
+											option(Value='23') 23
+											option(Value='24') 24
+											option(Value='25') 25
+											option(Value='26') 26
+											option(Value='27') 27
+											option(Value='28') 28
+											option(Value='29') 29
+											option(Value='30') 30
+											option(Value='31') 31
+								.column.small-3.medium-2.left
+									label Year
+										select(name='birth-year-2')
+											option(Value='2000') 2000
+											option(Value='2001') 2001
+											option(Value='2002') 2002
+											option(Value='2003') 2003
+											option(Value='2004') 2004
+											option(Value='2005') 2005
+											option(Value='2006') 2006
+											option(Value='2007') 2007
+											option(Value='2008') 2008
+											option(Value='2009') 2009
+							.row
+								.column.small-6.medium-3.left
+									label Shirt Size
+										select(name='shirt-size-2')
+											option(Value='Youth S') Youth S
+											option(Value='Youth M') Youth M
+											option(Value='Youth L') Youth L
+											option(Value='Youth XL') Youth XL
+											option(Value='S') Small
+											option(Value='M') Medium
+											option(Value='L') Large
+							.row
+								.column.small-12.medium-12
+									fieldset
+										legend Medical
+										.row
+											.column.small-12.medium-12
+												label Allergies
+													textarea(type='text', placeholder='Please list all alergies here...',name='allergies-2' ,rows='6')
+										.row
+											.column.small-12.medium-3
+												label Requires medication
+												input(type='radio', name='meds-req-2', value='yes')
+												label(for='med-yes') Yes
+												input(type='radio', name='meds-req-2', value='no')
+												label(for='med-no') No
+										
+					//- END CAMPER 2
+			input(type='hidden', name='hidden',value='register')
+		.row
+			.column.small-12
+				#sucmessage
+
+		.row
+			.column.small-12
+				div.g-recaptcha.right(data-sitekey="6LctdQITAAAAAFLneCsx9eAiUfHlhiwBj5I-lFO-")
+		.row#submit
+			.column.small-12
+				button.button.success.right(type='button',value='submit',onclick="submitForm();") SUBMIT

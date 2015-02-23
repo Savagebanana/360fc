@@ -1,0 +1,53 @@
+doctype
+html(lang='en')
+	//- link output .css stylesheets, and output .js scripts in the Head
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title 360 Futbol Camp
+		
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
+		link(href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,400', rel='stylesheet', type='text/css')
+		link(rel='stylesheet', href='stylesheets/app.css')
+		link(rel='stylesheet', href='stylesheets/animate.min.css')
+		script(scr='bower_components/modernizr.js')
+		script(src='js/AnimOnScroll.js')
+		script(src='js/min/wow.min.js')
+
+	
+		script| new WOW().init();
+	body
+		//- NAV included here
+		include _nav
+		//- HEADER included here
+		include _header
+		
+		//- CONTENT included here
+		include _about
+		
+		//- OUR-TEAM included here
+		include _our-team
+		
+		//- TESTIMONIAL included here
+		include _testimonial
+		
+		//- CONTACT FORM included here
+		include _contact
+		
+		//- GOOGLE MAP included here
+		include _map
+		
+		//- REGISTRATION FORM included here
+		include _register-sec
+		
+		//- FOTTER included here
+		include _footer
+			
+		//- jquery scripts
+		script(src='bower_components/jquery/dist/jquery.min.js')
+		script(src='bower_components/foundation/js/foundation.min.js')
+		//- script(src='http://maps.google.com/maps/api/js?v=3&sensor=true')
+		script(src='js/headroom.js')
+		//- script(src='http://maps.gstatic.com/maps-api-v3/api/js/19/10/main.js')
+		script(src='js/app.js')
+		script(src='js/googletrack.js')
