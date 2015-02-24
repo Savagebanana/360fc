@@ -1,6 +1,6 @@
 <?php
 require_once("PHPMailer-master/PHPMailerAutoload.php");
-//$config = require("config.php");
+$config = require("config.php");
 
 /* Cleaning Data */
 
@@ -31,7 +31,7 @@ if($_POST['hidden']== "contact"){
 	$mail->addReplyTo($_POST['email']);
 	$mail->Subject = $_POST['subject'];
 	$mail->Body = $_POST['message'];
-    //$mail->Body = json_encode($config);
+    $mail->Body = json_encode($config);
 
     if(!$mail->send()){
         die();
