@@ -32,12 +32,12 @@ if($_POST['hidden']== "contact"){
 	$mail->Body = $_POST['message'];
 
 } else if($_POST['hidden'] == "register"){
-    $captchaData = new stdClass();
-
-    $captchaData->secret = "6LctdQITAAAAAENnVVeKuX12oRSYF7RO73BDgr3R";
-    $captchaData->response = $_POST['g-recaptcha-response'];
-
-    $jsonData = $json_encode($captchaData);
+//    $captchaData = new stdClass();
+//
+//    $captchaData->secret = "6LctdQITAAAAAENnVVeKuX12oRSYF7RO73BDgr3R";
+//    $captchaData->response = $_POST['g-recaptcha-response'];
+//
+//    $jsonData = $json_encode($captchaData);
 //    $crl = curl_init("https://www.google.com/recaptcha/api/siteverify");
 //
 //    curl_setopt($crl, CURLOPT_POST,true);
@@ -69,7 +69,7 @@ if($_POST['hidden']== "contact"){
 	$mail->Body .= "Shirt size C1: ".$_POST['shirt-size']."<br>";
 	$mail->Body .= "Allergies: ".$_POST['allergies']."<br>";
 	$mail->Body .= "Meds Required: ".$_POST['meds-req']."<br>";
-    $mail->Body = $jsonData;
+//    $mail->Body = $jsonData;
 	if ($_POST['camper-2-name']!=""){
 
 		$mail->Body .= "Camper 2 Name: ".$_POST['camper-one-name']."<br>";
