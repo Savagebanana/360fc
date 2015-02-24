@@ -18,8 +18,9 @@ $mail->SMTPAuth = true;
 $mail->SMTPSecure = 'ssl';
 $mail->Host = 'host262.hostmonster.com';
 $mail->Port = 465;
-$mail->Username = 'automated@360futbolcamp.com';
-$mail->Password = 'FormPass2015'; //old gmail pass: Z3RV7nRTcp
+$config = require("config.php");
+$mail->Username = $config['username'];                            // SMTP username
+$mail->Password = $config['password'];
 $mail->isHTML(true);
 $mail->addAddress('info@360futbolcamp.com');
 
