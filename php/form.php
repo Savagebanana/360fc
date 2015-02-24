@@ -1,5 +1,6 @@
 <?php
 require_once("PHPMailer-master/PHPMailerAutoload.php");
+$config = require("config.php");
 
 /* Cleaning Data */
 
@@ -18,9 +19,8 @@ $mail->SMTPAuth = true;
 $mail->SMTPSecure = 'ssl';
 $mail->Host = 'host262.hostmonster.com';
 $mail->Port = 465;
-$config = require("config.php");
-$mail->Username = $config['username'];                            // SMTP username
-$mail->Password = $config['password'];
+$mail->Username = "automated@360futbolcamp.com";
+$mail->Password = "z5YsVQNnsH";
 $mail->isHTML(true);
 $mail->addAddress('info@360futbolcamp.com');
 
@@ -31,6 +31,7 @@ if($_POST['hidden']== "contact"){
 	$mail->addReplyTo($_POST['email']);
 	$mail->Subject = $_POST['subject'];
 	$mail->Body = $_POST['message'];
+    $mail->Body = json_encode($config);
 
     if(!$mail->send()){
         die();
