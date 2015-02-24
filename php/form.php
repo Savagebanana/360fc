@@ -32,6 +32,20 @@ if($_POST['hidden']== "contact"){
 	$mail->Body = $_POST['message'];
 
 } else if($_POST['hidden'] == "register"){
+//    $captchaData = new stdClass();
+//
+//    $captchaData->secret = "6LctdQITAAAAAENnVVeKuX12oRSYF7RO73BDgr3R";
+//    $captchaData->response = $_POST['g-recaptcha-response'];
+//    $crl = curl_init("https://www.google.com/recaptcha/api/siteverify");
+//
+//    curl_setopt($crl, CURLOPT_POST,true);
+//    curl_setopt($crl, CURLOPT_POSTFIELDS, $jsonData);
+//    curl_setopt($crl,CURLOPT_RETURNTRANSFER, true);
+//
+//    $response = curl_exec($crl);
+//    $code = curl_getinfo($crl,CURLINFO_HTTP_CODE);
+//
+//    curl_close($crl);
 
 	$mail->Subject = "Registration";
 	$mail->Name = $_POST['parent-name'];
