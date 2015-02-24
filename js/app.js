@@ -93,8 +93,6 @@ function submitForm(){
 		data[this.name] = $(this).val();
 	}
 	});
-    data.recaptcha = grecaptcha.getResponse();
-    console.log(data);
 	var success = $("#sucmessage").append( "<p>Thank You! Your message has been sent. You can reach Coach Paul at (416) 707-8850 with any questions, and he will be in contact with you this week to confirm your registration and collect your payment.</p>" );
 
 			$.ajax({
