@@ -40,7 +40,7 @@ $('.project-item').click(function () {
 });
 // close coach profiles
 
-$('.project-close').click(function () {
+$('.project-close').click(function () { 
 
 	$(this).closest('.project').hide();
 
