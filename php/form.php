@@ -38,16 +38,16 @@ if($_POST['hidden']== "contact"){
     $captchaData->response = $_POST['g-recaptcha-response'];
 
     $jsonData = json_encode($captchaData);
-    $crl = curl_init("https://www.google.com/recaptcha/api/siteverify");
-
-    curl_setopt($crl, CURLOPT_POST,true);
-    curl_setopt($crl, CURLOPT_POSTFIELDS, $jsonData);
-    curl_setopt($crl,CURLOPT_RETURNTRANSFER, true);
-
-    $response = curl_exec($crl);
-    $code = curl_getinfo($crl,CURLINFO_HTTP_CODE);
-
-    curl_close($crl);
+//    $crl = curl_init("https://www.google.com/recaptcha/api/siteverify");
+//
+//    curl_setopt($crl, CURLOPT_POST,true);
+//    curl_setopt($crl, CURLOPT_POSTFIELDS, $jsonData);
+//    curl_setopt($crl,CURLOPT_RETURNTRANSFER, true);
+//
+//    $response = curl_exec($crl);
+//    $code = curl_getinfo($crl,CURLINFO_HTTP_CODE);
+//
+//    curl_close($crl);
 
 
 	$mail->Subject = "Registration";
@@ -69,7 +69,7 @@ if($_POST['hidden']== "contact"){
 	$mail->Body .= "Shirt size C1: ".$_POST['shirt-size']."<br>";
 	$mail->Body .= "Allergies: ".$_POST['allergies']."<br>";
 	$mail->Body .= "Meds Required: ".$_POST['meds-req']."<br>";
-    $mail->Body = $response;
+    $mail->Body = $jsonData;
 	if ($_POST['camper-2-name']!=""){
 
 		$mail->Body .= "Camper 2 Name: ".$_POST['camper-one-name']."<br>";
