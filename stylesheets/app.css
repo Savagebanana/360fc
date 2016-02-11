@@ -4178,6 +4178,58 @@ label.error {
     margin-left: -0.28889em;
     margin-top: -0.48889em; }
 
+/* line 131, ../bower_components/foundation/scss/foundation/components/_tables.scss */
+table {
+  background: #cdcfc3;
+  margin-bottom: 1.25rem;
+  border: solid 4px #056fb7;
+  table-layout: auto; }
+  /* line 69, ../bower_components/foundation/scss/foundation/components/_tables.scss */
+  table caption {
+    background: transparent;
+    color: #0566a8;
+    font-size: 1rem;
+    font-weight: bold; }
+  /* line 78, ../bower_components/foundation/scss/foundation/components/_tables.scss */
+  table thead {
+    background: #f48031; }
+    /* line 82, ../bower_components/foundation/scss/foundation/components/_tables.scss */
+    table thead tr th,
+    table thead tr td {
+      padding: 0.5rem 0.625rem 0.625rem;
+      font-size: 0.875rem;
+      font-weight: bold;
+      color: #0566a8; }
+  /* line 92, ../bower_components/foundation/scss/foundation/components/_tables.scss */
+  table tfoot {
+    background: #f48031; }
+    /* line 96, ../bower_components/foundation/scss/foundation/components/_tables.scss */
+    table tfoot tr th,
+    table tfoot tr td {
+      padding: 0.5rem 0.625rem 0.625rem;
+      font-size: 0.875rem;
+      font-weight: bold;
+      color: #0566a8; }
+  /* line 107, ../bower_components/foundation/scss/foundation/components/_tables.scss */
+  table tr th,
+  table tr td {
+    padding: 0.5625rem 0.625rem;
+    font-size: 0.875rem;
+    color: #056fb7;
+    text-align: left; }
+  /* line 115, ../bower_components/foundation/scss/foundation/components/_tables.scss */
+  table tr.even, table tr.alt, table tr:nth-of-type(even) {
+    background: #d9dad2; }
+  /* line 120, ../bower_components/foundation/scss/foundation/components/_tables.scss */
+  table thead tr th,
+  table tfoot tr th,
+  table tfoot tr td,
+  table tbody tr th,
+  table tbody tr td,
+  table tr td {
+    display: table-cell;
+    line-height: 1.125rem; }
+
 /* Tooltips */
 /* line 38, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
 .has-tip {
@@ -5500,12 +5552,15 @@ div.brand h4 {
     #about .week-sched a p {
       margin-bottom: 0;
       line-height: 1rem; }
+  /* line 152, ../sass/app.sass */
+  #about table {
+    border-radius: 0.1875rem; }
 
-/* line 155, ../sass/app.sass */
+/* line 157, ../sass/app.sass */
 #our-team {
   background: #056fb7;
   padding: 1.875rem 0; }
-  /* line 159, ../sass/app.sass */
+  /* line 161, ../sass/app.sass */
   #our-team h1 {
     color: #e0e1da;
     font-weight: 300;
@@ -5514,61 +5569,61 @@ div.brand h4 {
     text-transform: uppercase;
     display: inline-block;
     padding: 0 0.625rem; }
-  /* line 168, ../sass/app.sass */
+  /* line 170, ../sass/app.sass */
   #our-team h2, #our-team h3, #our-team h4, #our-team h5, #our-team h6 {
     color: #e0e1da; }
-  /* line 170, ../sass/app.sass */
+  /* line 172, ../sass/app.sass */
   #our-team p {
     color: #e0e1da; }
-  /* line 173, ../sass/app.sass */
+  /* line 175, ../sass/app.sass */
   #our-team img {
     border-radius: 1%;
     padding: 1.25rem 0; }
-  /* line 177, ../sass/app.sass */
+  /* line 179, ../sass/app.sass */
   #our-team img.thumb {
     border-radius: 50%;
     vertical-align: center; }
-  /* line 182, ../sass/app.sass */
+  /* line 184, ../sass/app.sass */
   #our-team div.panel p {
     color: #056fb7; }
-  /* line 185, ../sass/app.sass */
+  /* line 187, ../sass/app.sass */
   #our-team div.panel h2 {
     color: #056fb7;
     font-weight: 600; }
-  /* line 188, ../sass/app.sass */
+  /* line 190, ../sass/app.sass */
   #our-team div.panel h4 {
     color: #f48031;
     font-weight: 200;
     margin-top: 0.0625rem;
     margin-bottom: 0.25rem; }
-  /* line 193, ../sass/app.sass */
+  /* line 195, ../sass/app.sass */
   #our-team div.panel h4.subheader {
     color: #056fb7;
     font-weight: 200;
     margin-bottom: 1rem; }
 
-/* line 201, ../sass/app.sass */
+/* line 203, ../sass/app.sass */
 #testimonial {
   padding: 1.25rem 0;
   background: -webkit-linear-gradient(rgba(49, 115, 159, 0.8), rgba(52, 144, 206, 0.8)), url("../images/slide-bg.png") no-repeat center center fixed;
   background: linear-gradient(rgba(49, 115, 159, 0.8), rgba(52, 144, 206, 0.8)), url("../images/slide-bg.png") no-repeat center center fixed;
   background-size: cover; }
-  /* line 208, ../sass/app.sass */
+  /* line 210, ../sass/app.sass */
   #testimonial div.slider-with-photo {
     background-size: transparent; }
-    /* line 211, ../sass/app.sass */
+    /* line 213, ../sass/app.sass */
     #testimonial div.slider-with-photo div.box {
       position: relative; }
-      /* line 214, ../sass/app.sass */
+      /* line 216, ../sass/app.sass */
       #testimonial div.slider-with-photo div.box blockquote h1.quote {
         font-size: 1.25rem;
         font-weight: 100;
         color: #e0e1da; }
-      /* line 219, ../sass/app.sass */
+      /* line 221, ../sass/app.sass */
       #testimonial div.slider-with-photo div.box blockquote cite.author {
         position: relative;
         left: 65%; }
-    /* line 222, ../sass/app.sass */
+    /* line 224, ../sass/app.sass */
     #testimonial div.slider-with-photo h1.quote:before {
       content: "“";
       font-size: 60px;
@@ -5576,7 +5631,7 @@ div.brand h4 {
       line-height: 0;
       position: relative;
       top: 12px; }
-    /* line 230, ../sass/app.sass */
+    /* line 232, ../sass/app.sass */
     #testimonial div.slider-with-photo h1.quote:after {
       content: "”";
       font-size: 60px;
@@ -5586,16 +5641,16 @@ div.brand h4 {
       bottom: -24px;
       right: -2px; }
 
-/* line 241, ../sass/app.sass */
+/* line 243, ../sass/app.sass */
 #map .container {
   width: 100%;
   overflow: hidden;
   margin: 0 auto; }
 
-/* line 249, ../sass/app.sass */
+/* line 251, ../sass/app.sass */
 #contact-form {
   padding: 1.875rem 0; }
-  /* line 251, ../sass/app.sass */
+  /* line 253, ../sass/app.sass */
   #contact-form h1 {
     color: #056fb7;
     font-weight: 300;
@@ -5605,11 +5660,11 @@ div.brand h4 {
     display: inline-block;
     padding: 0 0.625rem; }
 
-/* line 262, ../sass/app.sass */
+/* line 264, ../sass/app.sass */
 #register {
   background: #f48031;
   padding: 1.875rem 0; }
-  /* line 266, ../sass/app.sass */
+  /* line 268, ../sass/app.sass */
   #register h1, #register h2 {
     color: #e0e1da;
     font-weight: 300;
@@ -5618,65 +5673,65 @@ div.brand h4 {
     text-transform: uppercase;
     display: inline-block;
     padding: 0 0.625rem; }
-  /* line 275, ../sass/app.sass */
+  /* line 277, ../sass/app.sass */
   #register h3, #register h4 {
     color: #e0e1da;
     font-weight: 400;
     text-transform: uppercase; }
-  /* line 279, ../sass/app.sass */
+  /* line 281, ../sass/app.sass */
   #register .reg-btn h5 {
     color: #d4d6cc;
     font-weight: 700;
     display: inline-block;
     margin-top: 0.0625rem; }
-  /* line 285, ../sass/app.sass */
+  /* line 287, ../sass/app.sass */
   #register p {
     color: #e0e1da;
     margin: 2.5rem 0; }
-  /* line 289, ../sass/app.sass */
+  /* line 291, ../sass/app.sass */
   #register .vert {
     position: relative;
     vertical-align: middle; }
-  /* line 292, ../sass/app.sass */
+  /* line 294, ../sass/app.sass */
   #register img.logo {
     padding-top: 0.9375rem; }
-  /* line 294, ../sass/app.sass */
+  /* line 296, ../sass/app.sass */
   #register .sfc {
     color: #056fb7; }
-    /* line 297, ../sass/app.sass */
+    /* line 299, ../sass/app.sass */
     #register .sfc:hover {
       color: #068de9; }
 
-/* line 304, ../sass/app.sass */
+/* line 306, ../sass/app.sass */
 #registration-form-one h5 {
   background: #f79e61;
   padding: 0.625rem;
   border-radius: 0.3125rem; }
-/* line 309, ../sass/app.sass */
+/* line 311, ../sass/app.sass */
 #registration-form-one label p {
   margin-bottom: 0;
   color: #f48031 !important; }
 
-/* line 315, ../sass/app.sass */
+/* line 317, ../sass/app.sass */
 #footer {
   padding-top: 5rem;
   background: #f48031; }
-  /* line 318, ../sass/app.sass */
+  /* line 320, ../sass/app.sass */
   #footer ul {
     display: block;
     width: 100%;
     margin: 0.9375rem 0; }
-    /* line 322, ../sass/app.sass */
+    /* line 324, ../sass/app.sass */
     #footer ul li {
       display: inline-block;
       width: 33.33%;
       margin: 0; }
-  /* line 327, ../sass/app.sass */
+  /* line 329, ../sass/app.sass */
   #footer a {
     color: #0566a8; }
-    /* line 329, ../sass/app.sass */
+    /* line 331, ../sass/app.sass */
     #footer a:hover {
       color: #068de9; }
-  /* line 331, ../sass/app.sass */
+  /* line 333, ../sass/app.sass */
   #footer p {
     color: #f79e61; }

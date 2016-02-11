@@ -1,6 +1,6 @@
 <?php
 require_once("PHPMailer-master/PHPMailerAutoload.php");
-$config = require("config.php");
+// $config = require("config.php");
 
 /* Cleaning Data */
 
@@ -31,7 +31,7 @@ if($_POST['hidden']== "contact"){
 	$mail->addReplyTo($_POST['email']);
 	$mail->Subject = $_POST['subject'];
 	$mail->Body = $_POST['message'];
-    $mail->Body = json_encode($config);
+    // $mail->Body = json_encode($config);
 
     if(!$mail->send()){
         die();
@@ -55,40 +55,34 @@ if($_POST['hidden']== "contact"){
         $mail->Body .= "Emergency Contact: " . $_POST['emergency-contact'] . "<br>";
         $mail->Body .= "Emergency Phone Number: " . $_POST['emergency-phone'] . "<br>";
         $mail->Body .= "Relation to camper/s: " . $_POST['relation'] . "<br>";
-        $mail->Body .= "Camper 1 Name: " . $_POST['camper-one-name'] . "<br>";
+        $mail->Body .= "Camper 1 Name: " . $_POST['camper-1-name'] . "<br>";
         $mail->Body .= "Birthday: " . $_POST['birth-month'] . " " . $_POST['birth-day'] . " " . $_POST['birth-year'] . "<br>";
         $mail->Body .= "Shirt size C1: " . $_POST['shirt-size'] . "<br>";
         $mail->Body .= "Allergies: " . $_POST['allergies'] . "<br>";
         $mail->Body .= "Meds Required: " . $_POST['meds-req'] . "<br>";
         if ($_POST['camper-2-name'] != "") {
 
-            $mail->Body .= "Camper 2 Name: " . $_POST['camper-one-name'] . "<br>";
+            $mail->Body .= "Camper 2 Name: " . $_POST['camper-2-name'] . "<br>";
             $mail->Body .= "Birthday: " . $_POST['birth-month-2'] . " " . $_POST['birth-day-2'] . " " . $_POST['birth-year-2'] . "<br>";
-            $mail->Body .= "Shirt size C1 " . $_POST['shirt-size-2'] . "<br>";
+            $mail->Body .= "Shirt size C2: " . $_POST['shirt-size-2'] . "<br>";
             $mail->Body .= "Allergies: " . $_POST['allergies-2'] . "<br>";
             $mail->Body .= "Meds Required: " . $_POST['meds-req-2'] . "<br>";
 
         }
         $mail->Body .= "Weeks Selected: <br>";
         if ($_POST['A1'] == "true") {
-            $mail->Body .= "&nbsp;&nbsp;&nbsp;July 20-24<br>";
+            $mail->Body .= "&nbsp;&nbsp;&nbsp;July 18-22<br>";
         }
         if ($_POST['A2'] == "true") {
-            $mail->Body .= "&nbsp;&nbsp;&nbsp;July 27-31<br>";
+            $mail->Body .= "&nbsp;&nbsp;&nbsp;July 25-29<br>";
         }
         if ($_POST['B1'] == "true") {
-            $mail->Body .= "&nbsp;&nbsp;&nbsp;August 3-7<br>";
+            $mail->Body .= "&nbsp;&nbsp;&nbsp;August 15-19<br>";
         }
         if ($_POST['B2'] == "true") {
-            $mail->Body .= "&nbsp;&nbsp;&nbsp;August 10-14<br>";
+            $mail->Body .= "&nbsp;&nbsp;&nbsp;August 22-26<br>";
         }
-        if ($_POST['C1'] == "true") {
-            $mail->Body .= "&nbsp;&nbsp;&nbsp;August 17-21<br>";
-        }
-        if ($_POST['C2'] == "true") {
-            $mail->Body .= "&nbsp;&nbsp;&nbsp;August 24-28<br>";
-        }
-
+	  $mail->Body .= "Promo Code: " . $_POST['promo-code'] . "<br>";
         $mail->Body .= "<br>";
         if (!$mail->send()) {
             die();
